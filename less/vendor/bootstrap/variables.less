@@ -44,13 +44,13 @@
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sansFontFamily:        "Open Sans", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
-@baseFontSize:          14px;
+@baseFontSize:          1em;
 @baseFontFamily:        @sansFontFamily;
-@baseLineHeight:        20px;
+@baseLineHeight:        1.7em;
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
@@ -276,6 +276,11 @@
 @gridGutterWidth:         20px;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
+// 1400px min
+@gridColumnWidth1400:     90px;
+@gridGutterWidth1400:     30px;
+@gridRowWidth1400:        (@gridColumns * @gridColumnWidth1400) + (@gridGutterWidth1400 * (@gridColumns - 1));
+
 // 1200px min
 @gridColumnWidth1200:     70px;
 @gridGutterWidth1200:     30px;
@@ -291,6 +296,10 @@
 // -------------------------
 @fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
 @fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+
+// 1400px min
+@fluidGridColumnWidth1400:     percentage(@gridColumnWidth1400/@gridRowWidth1400);
+@fluidGridGutterWidth1400:     percentage(@gridGutterWidth1400/@gridRowWidth1400);
 
 // 1200px min
 @fluidGridColumnWidth1200:     percentage(@gridColumnWidth1200/@gridRowWidth1200);
